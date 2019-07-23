@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        FindObjectOfType<EndStats>().UpdateEndStats();
+        MenuManager.Instance.EnableGameCanvas(false);
         SceneManager.LoadScene(1);
     }
 }

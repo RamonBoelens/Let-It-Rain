@@ -34,8 +34,9 @@ public class Spawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        Vector2 SpawnPos = new Vector2(Random.Range(xMin, xMax), transform.position.y);
+        Vector2 SpawnPos = new Vector2(Random.Range(xMin, xMax / 2), transform.position.y);
         var go = Instantiate(enemyPf, new Vector3(SpawnPos.x, SpawnPos.y, 0), transform.rotation);
+        go.transform.SetParent(gameObject.transform);
 
         float fallSpeed = Random.Range(3.0f, 5.0f);
 
