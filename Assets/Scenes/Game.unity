@@ -149,7 +149,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ba0fa96727bb4438a633b910e1efd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPf: {fileID: 1022086928449028535, guid: 4cfac150853c6ee42abbf8b9220c1e5b, type: 3}
+  enemyPf:
+  - {fileID: 1022086928449028535, guid: e0bc8b6243ef30540920b6620b3e66a0, type: 3}
+  - {fileID: 1022086928449028535, guid: c3ba262442f347149b26b992b96588fc, type: 3}
+  - {fileID: 1022086928449028535, guid: 4ea4078eaf8b86a4b8499bd7f3fdeb66, type: 3}
+  - {fileID: 1022086928449028535, guid: 4cfac150853c6ee42abbf8b9220c1e5b, type: 3}
+  - {fileID: 1022086928449028535, guid: 5412a48f7841fef41b2cc95d83112bb1, type: 3}
+  - {fileID: 1022086928449028535, guid: c4ba00b14e653cb4f8d2e6ac52c06734, type: 3}
+  spawnRate:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.00028871582
+      value: 0.7960785
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 7.0674067
+      value: 0.5577297
+      inSlope: -0.03400015
+      outSlope: -0.03400015
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.20317702
+      outWeight: 0.07505188
+    - serializedVersion: 3
+      time: 27.65458
+      value: 0.06960747
+      inSlope: -0.0063736727
+      outSlope: -0.0063736727
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06616785
+      outWeight: 0.21458343
+    - serializedVersion: 3
+      time: 42.867523
+      value: 0.029547622
+      inSlope: -0.001819444
+      outSlope: -0.001819444
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.24510965
+    - serializedVersion: 3
+      time: 59.999954
+      value: 0.009791742
+      inSlope: -0.000016943048
+      outSlope: -0.000016943048
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.23476565
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &150223566
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +423,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00030189753, y: 0.00030192733}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -377,7 +434,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.14007458, y: 0.14128217}
   m_EdgeRadius: 0
 --- !u!50 &870248205
 Rigidbody2D:
@@ -663,6 +720,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580388414512880504, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740953838591203471, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942260771552930451, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716781317391050414, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -292.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716781317391050414, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 192.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040639116037120802, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 192.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040639116037120802, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 293.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069856258390286613, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -292.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069856258390286613, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 175.19998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858da3c64ad13f64a8adcab0180c6e7d, type: 3}
