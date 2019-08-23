@@ -39,4 +39,9 @@ public class PlayerController : MonoBehaviour
         MenuManager.Instance.EnableGameCanvas(false);
         SceneManager.LoadScene(1);
     }
+
+    public float GetVerticalMousePosition()
+    {
+        return (transform.position.y + 5) / 10;
+    }
 }
