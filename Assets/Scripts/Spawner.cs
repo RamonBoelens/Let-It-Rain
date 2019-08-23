@@ -50,7 +50,7 @@ public class Spawner : MonoBehaviour
 
         // Randomize stats
         float fallSpeed = Random.Range(3.0f, 5.0f);
-        float size = Random.Range(0.25f, 2.0f);
+        float size = Random.Range(0.5f, 1.85f);
 
         // Randomize Spawn Position
         Vector2 SpawnPos = new Vector2(Random.Range(xMin, xMax), transform.position.y);

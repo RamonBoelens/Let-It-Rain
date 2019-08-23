@@ -160,8 +160,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.00028871582
-      value: 0.7960785
+      time: -0.042098463
+      value: 0.8004156
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -169,40 +169,40 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 7.0674067
-      value: 0.5577297
-      inSlope: -0.03400015
-      outSlope: -0.03400015
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.20317702
-      outWeight: 0.07505188
-    - serializedVersion: 3
-      time: 27.65458
-      value: 0.06960747
-      inSlope: -0.0063736727
-      outSlope: -0.0063736727
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.06616785
-      outWeight: 0.21458343
-    - serializedVersion: 3
-      time: 42.867523
-      value: 0.029547622
-      inSlope: -0.001819444
-      outSlope: -0.001819444
+      time: 20.776875
+      value: 0.40159386
+      inSlope: -0.015304886
+      outSlope: -0.015304886
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.24510965
+      outWeight: 0.07895778
     - serializedVersion: 3
-      time: 59.999954
-      value: 0.009791742
-      inSlope: -0.000016943048
-      outSlope: -0.000016943048
+      time: 59.84099
+      value: 0.12580217
+      inSlope: -0.0024038288
+      outSlope: -0.0024038288
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.23476565
+      inWeight: 0.33333334
+      outWeight: 0.08667349
+    - serializedVersion: 3
+      time: 120.070724
+      value: 0.030218821
+      inSlope: -0.00044558276
+      outSlope: -0.00044558276
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.011143101
+    - serializedVersion: 3
+      time: 299.9997
+      value: 0.00005828042
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -765,6 +765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 175.19998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283119117643322071, guid: 858da3c64ad13f64a8adcab0180c6e7d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0099983215
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858da3c64ad13f64a8adcab0180c6e7d, type: 3}
