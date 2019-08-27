@@ -12,6 +12,9 @@ public class _ScoreManager : MonoBehaviour
     private float heightMultiplier;
     private float doublePointsMultiplier = 1;
 
+    public  float scorePerSecond = 10.0f;
+    private float score = 0.0f;
+
     private static _ScoreManager _instance;
     public static _ScoreManager Instance { get { return _instance; } }
 
@@ -21,8 +24,6 @@ public class _ScoreManager : MonoBehaviour
             Destroy(gameObject);
         else
             _instance = this;
-
-        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
@@ -38,6 +39,12 @@ public class _ScoreManager : MonoBehaviour
     void Update()
     {
         UpdateMultipliers();
+        AddScore();
+    }
+
+    private void AddScore()
+    {
+        score += scorePerSecond * Time.deltaTime * totalMultiplier;
     }
 
     private void UpdateMultipliers()
@@ -60,11 +67,13 @@ public class _ScoreManager : MonoBehaviour
         totalMultiplier = timeMultiplier + heightMultiplier + doublePointsMultiplier;
     }
 
-    public void GetMultipliers(out float TM, out float CTM, out float CHM, out float DPM)
+    public float GetTotalMultiplier()
     {
-        TM  = totalMultiplier;
-        CTM = timeMultiplier;
-        CHM = heightMultiplier;
-        DPM = doublePointsMultiplier;
+        return totalMultiplier;
+    }
+
+    public float GetScore()
+    {
+        return score;
     }
 }

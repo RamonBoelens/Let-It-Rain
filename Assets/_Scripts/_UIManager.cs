@@ -11,8 +11,8 @@ public class _UIManager : MonoBehaviour
     /*
      * Multiplier Objects
      */
-    public TextMeshProUGUI totalMultiplierText, timeMultiplierText, heightMultiplierText, doublePointsMultiplierText;
-    private float totalMultiplier, timeMultiplier, heightMultiplier, doublePointsMultiplier;
+    public TextMeshProUGUI MultiplierText, ScoreText;
+    private float totalMultiplier, score;
 
     private void Start()
     {
@@ -24,10 +24,11 @@ public class _UIManager : MonoBehaviour
 
     private void Update()
     {
-        // Update the multipliers
+        // Get the latest multiplier and score
         if (GM)
         {
-            GM.GetScoreManager().GetMultipliers(out totalMultiplier, out timeMultiplier, out heightMultiplier, out doublePointsMultiplier);
+            totalMultiplier = GM.GetScoreManager().GetTotalMultiplier();
+            score = GM.GetScoreManager().GetScore();
         }
 
         UpdateText();
@@ -35,9 +36,7 @@ public class _UIManager : MonoBehaviour
 
     private void UpdateText()
     {
-        totalMultiplierText.text = "Current Total Multiplier: " + totalMultiplier.ToString("F2") + "x";
-        timeMultiplierText.text = "Current Time Multiplier: " + timeMultiplier.ToString("F2") + "x";
-        heightMultiplierText.text = "Current Height Multiplier: " + heightMultiplier.ToString("F2") + "x";
-        doublePointsMultiplierText.text = "Double Points Multiplier " + doublePointsMultiplier + "x";
+        MultiplierText.text = "Multiplier: " + totalMultiplier.ToString("F2") + "x";
+        ScoreText.text = "Score: " + Mathf.FloorToInt(score).ToString();
     }
 }
