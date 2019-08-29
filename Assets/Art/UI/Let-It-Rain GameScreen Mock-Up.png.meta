@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 4ed24073e67fbb144b3f3c52b7ed7a40
+guid: 23118457c07ca68438395961bd3a5ff6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1161201145128540330
-    second: Icons_0
+      213: 4089091261712388332
+    second: TopBar
   - first:
-      213: 2130535880278150251
-    second: Icons_1
+      213: -2633124207902492040
+    second: LeftSide
   - first:
-      213: 184950751378207249
-    second: Icons_2
-  - first:
-      213: 1202984965197363600
-    second: Icons_3
+      213: -2856114278953191788
+    second: RightSide
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -84,7 +81,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -98,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icons_0
+      name: TopBar
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 258
+        width: 1664
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,41 +109,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c7171fe993cd624aaa078239582a23f
-      internalID: 1161201145128540330
+      spriteID: b3e950b23837c754e93d2230030f0ae0
+      internalID: 4089091261712388332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09f280205230e674caeb6d717178e9f1
-      internalID: 2130535880278150251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_2
+      name: LeftSide
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 782
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 627e0443a97ac374e87c26e5e57e121f
-      internalID: 184950751378207249
+      spriteID: 2d69aa31981208b4db1403581eebe843
+      internalID: -2633124207902492040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_3
+      name: RightSide
       rect:
         serializedVersion: 2
-        x: 64
+        x: 882
         y: 0
-        width: 64
-        height: 64
+        width: 782
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb63530dc2ba6be49a1782f968e6bd70
-      internalID: 1202984965197363600
+      spriteID: a6f71a8cf6fb3ed4fb0dba34ab41ebe3
+      internalID: -2856114278953191788
       vertices: []
       indices: 
       edges: []
@@ -184,7 +160,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8056532aceacb574fb079d91edb00d64
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

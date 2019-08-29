@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4936463984060979560}
   - component: {fileID: 4565415021064599904}
-  - component: {fileID: -9118775592243134657}
   - component: {fileID: -1641282238786045648}
   - component: {fileID: 2762591704867592450}
+  - component: {fileID: -1310184523997759871}
   m_Layer: 0
   m_Name: Octy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,6 +59,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -83,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-9118775592243134657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022086928449028535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3b5ca2c8f61c54cb223043962f8841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 1
 --- !u!50 &-1641282238786045648
 Rigidbody2D:
   serializedVersion: 4
@@ -152,3 +140,15 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.125}
       - {x: 0.25, y: 0.109375}
       - {x: 0.109375, y: 0.25}
+--- !u!114 &-1310184523997759871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022086928449028535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b366668b8fe4f4d87dc9dd8031052d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Destroyer
+  - Enemy
+  - ExtraLife
+  - ExtraShield
+  - Invulnerability
+  - DoublePoints
   layers:
   - Default
   - TransparentFX
