@@ -40,4 +40,9 @@ public class Timer : MonoBehaviour
     {
         return time;
     }
+
+    public bool GetActive()
+    {
+        return active;
+    }
 }

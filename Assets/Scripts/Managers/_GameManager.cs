@@ -8,6 +8,7 @@ public class _GameManager : MonoBehaviour
     private PlayerController player;
     private _ScoreManager scoreManager;
     private _UIManager UIManager;
+    private PowerUpEffect powerUpHandler;
 
     // Singleton
     private static _GameManager _instance;
@@ -24,11 +25,13 @@ public class _GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         scoreManager = _ScoreManager.Instance;
         UIManager = _UIManager.Instance;
+        powerUpHandler = PowerUpEffect.Instance;
 
-        if (!player)        { Debug.LogError("The GameManager can't find the player!"); }
-        if (!scoreManager)  { Debug.LogError("The GameManager can't find the score manager!"); }
-        if (!UIManager)     { Debug.LogError("The GameManager can't find the UI manager!"); }
-        
+        if (!player)         { Debug.LogError("The GameManager can't find the player!"); }
+        if (!scoreManager)   { Debug.LogError("The GameManager can't find the score manager!"); }
+        if (!UIManager)      { Debug.LogError("The GameManager can't find the UI manager!"); }
+        if (!powerUpHandler) { Debug.LogError("The GameManager can't find the power up handler!"); }
+
         GetComponent<Timer>().StartTimer();
     }
 
@@ -40,10 +43,11 @@ public class _GameManager : MonoBehaviour
 
     public void PowerUp(string powerUp)
     {
-        if (powerUp == "ExtraLife")
-        { GetComponent<PowerUpEffect>().ExtraLife(); }
-        else if (powerUp == "ExtraShield")
-        { GetComponent<PowerUpEffect>().ExtraShield(); }
+        if (powerUp == "ExtraLife")             { powerUpHandler.ExtraLife(); }
+        else if (powerUp == "ExtraShield")      { powerUpHandler.ExtraShield(); }
+        else if (powerUp == "Invulnerability")  { powerUpHandler.Invulnerability(); }
+        else if (powerUp == "DoublePoints")     { powerUpHandler.DoublePoints(); }
+
         else { Debug.LogWarning("Can't find the power up: " + powerUp); }
     }
 
@@ -60,5 +64,10 @@ public class _GameManager : MonoBehaviour
     public PlayerController GetPlayer()
     {
         return player;
+    }
+
+    public PowerUpEffect GetPowerUpHandler()
+    {
+        return powerUpHandler;
     }
 }

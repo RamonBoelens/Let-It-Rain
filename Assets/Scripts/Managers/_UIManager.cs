@@ -10,13 +10,16 @@ public class _UIManager : MonoBehaviour
     private _GameManager GM;
 
     [Header("Reference Images")]
-    public Sprite enabledLife;
-    public Sprite disabledLife;
-    public Sprite enabledShield;
-    public Sprite disabledShield;
+    public List<Sprite> lifeIcons;
+    public List<Sprite> shieldIcons;
+    public List<Sprite> invulnerabilityIcons;
+    public List<Sprite> doublePointsIcons;
 
-    public List<GameObject> LivesIcons;
-    public List<GameObject> ShieldsIcons;
+    [Space(20)]
+    public List<GameObject> lifeIconSlots;
+    public List<GameObject> shieldIconSlots;
+    public Image invulnerabilitySlot;
+    public Image doublePointsSlot;
 
     public TextMeshProUGUI MultiplierText, ScoreText, TimerText;
     private float totalMultiplier;
@@ -36,8 +39,11 @@ public class _UIManager : MonoBehaviour
     private void Start()
     {
         GM = _GameManager.Instance;
-
         if (!GM) { Debug.LogError("UIManager can't find the GameManager!"); }
+
+        // Check if the icon slots are set in the inspector
+        if (lifeIconSlots.Count <= 0) { Debug.LogWarning("Can't find the life icon slots!"); }
+        if (shieldIconSlots.Count <= 0) { Debug.LogWarning("Can't find the shield icon slots!"); }
 
         UpdateLivesIcons();
         UpdateShieldIcons();
@@ -70,12 +76,12 @@ public class _UIManager : MonoBehaviour
             int currentLives = GM.GetPlayer().GetComponent<PlayerStats>().GetLives();
             int currentSlot  = 0;
 
-            foreach (var life in LivesIcons)
+            foreach (var life in lifeIconSlots)
             {
                 if (currentSlot < currentLives)
-                    life.GetComponent<Image>().sprite = disabledLife;
+                    life.GetComponent<Image>().sprite = lifeIcons[1];
                 else
-                    life.GetComponent<Image>().sprite = enabledLife;
+                    life.GetComponent<Image>().sprite = lifeIcons[0];
 
                 currentSlot++;
             }
@@ -90,12 +96,12 @@ public class _UIManager : MonoBehaviour
             int currentShields = GM.GetPlayer().GetComponent<PlayerStats>().GetShields();
             int currentSlot = 0;
 
-            foreach (var shield in ShieldsIcons)
+            foreach (var shield in shieldIconSlots)
             {
                 if (currentSlot < currentShields)
-                    shield.GetComponent<Image>().sprite = disabledShield;
+                    shield.GetComponent<Image>().sprite = shieldIcons[1];
                 else
-                    shield.GetComponent<Image>().sprite = enabledShield;
+                    shield.GetComponent<Image>().sprite = shieldIcons[0];
 
                 currentSlot++;
             }
@@ -103,9 +109,29 @@ public class _UIManager : MonoBehaviour
         else { Debug.LogError("Couldn't find the GameManager!"); }
     }
 
+    private void UpdatePowerUpIcons()
+    {
+        if (GM)
+        {
+            if (GM.GetScoreManager().GetDoublePointsActive())
+                doublePointsSlot.sprite = doublePointsIcons[1];
+            else
+                doublePointsSlot.sprite = doublePointsIcons[0];
+        }
+
+        if (GM)
+        {
+            if (GM.GetPlayer().GetComponent<PlayerStats>().GetInvulnerability())
+                invulnerabilitySlot.sprite = invulnerabilityIcons[1];
+            else
+                invulnerabilitySlot.sprite = invulnerabilityIcons[0];
+        }
+    }
+
     public void UpdateIcons()
     {
         UpdateLivesIcons();
         UpdateShieldIcons();
+        UpdatePowerUpIcons();
     }
 }

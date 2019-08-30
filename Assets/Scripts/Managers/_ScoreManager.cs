@@ -12,6 +12,8 @@ public class _ScoreManager : MonoBehaviour
     private float heightMultiplier;
     private float doublePointsMultiplier = 1;
 
+    private bool doublePointsActive;
+
     public  float scorePerSecond = 10.0f;
     private float score = 0.0f;
 
@@ -24,6 +26,8 @@ public class _ScoreManager : MonoBehaviour
             Destroy(gameObject);
         else
             _instance = this;
+
+        doublePointsActive = false;
     }
 
     // Start is called before the first frame update
@@ -62,6 +66,10 @@ public class _ScoreManager : MonoBehaviour
         }
 
         // Double Points Multiplier
+        if (doublePointsActive)
+            doublePointsMultiplier = 2.0f;
+        else
+            doublePointsMultiplier = 1.0f;
 
         // Total Multiplier
         totalMultiplier = timeMultiplier + heightMultiplier + doublePointsMultiplier;
@@ -75,5 +83,18 @@ public class _ScoreManager : MonoBehaviour
     public float GetScore()
     {
         return score;
+    }
+
+    public void SetDoublePoints(bool active)
+    {
+        if (active)
+            doublePointsActive = true;
+        else
+            doublePointsActive = false;
+    }
+
+    public bool GetDoublePointsActive()
+    {
+        return doublePointsActive;
     }
 }
