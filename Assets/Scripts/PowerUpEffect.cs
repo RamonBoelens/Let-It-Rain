@@ -73,6 +73,9 @@ public class PowerUpEffect : MonoBehaviour
             invulnerabilityTimer.StartTimer();
 
         GM.GetUIManager().UpdateIcons();
+
+        // Start blinking
+        GM.GetPlayer().GetComponent<BlinkingEffect>().ActivateBlinking(GM.GetPlayer().GetComponent<SpriteRenderer>(), 5.0f);
     }
 
     public void DoublePoints()

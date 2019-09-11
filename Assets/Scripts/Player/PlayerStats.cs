@@ -32,7 +32,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (shields > 0) { shields--; return; }
 
-        lives--;
+        if (lives > 0) { lives--; }
+        else Debug.LogError("Can't substract any lives. The player is already death!");
+
+        if (lives <= 0)
+            GM.EndGame();
     }
 
     public void AddLife()
